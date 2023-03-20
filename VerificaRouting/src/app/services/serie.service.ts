@@ -15,6 +15,9 @@ export class SerieService {
     return obsSerie;
   }
 
+  getSerie(id:string){
+    const url= `https://api.tvmaze.com/shows/${id}`;
+    return this.http.get(url)
+  }
 
-  
 }

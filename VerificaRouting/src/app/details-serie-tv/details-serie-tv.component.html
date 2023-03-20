@@ -1,1 +1,6 @@
-<p>details-serie-tv works!</p>
+<div class="container">
+    <div *ngIf="show">
+        <h2>{{show.show.name}}</h2>
+        <p>Language:{{show.show.language}}</p>
+    </div>
+</div>
