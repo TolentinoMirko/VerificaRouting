@@ -1,1 +1,34 @@
-<p>search-serie-tv works!</p>
+
+<div class="container">
+
+    <div class="input-group">
+        <input type="text" #newquery>
+        <button (click)="submit(newquery)">Search</button>
+    </div>
+    
+    <div *ngIf="results">
+        <div *ngIf="!results|| results.length ==0">
+          No show has been found with the name '{{ query }}'
+        </div>
+      
+        <div *ngIf="results &&  results.length > 0">
+          <h1>Results</h1>
+          <div class="row">
+            <div class="col-sm-6 col-md-3" *ngFor="let s of results">
+              <div class="thumbnail">
+                <div class="content">
+                  <img src="{{s.show.image.original}}" style="width: 40%;" class="img-responsive">
+                  <div class="caption">
+                    <h3>
+                      <a [routerLink]="['/details', s.id]">
+                        {{s.show.name}}
+                      </a>
+                    </h3>        
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+

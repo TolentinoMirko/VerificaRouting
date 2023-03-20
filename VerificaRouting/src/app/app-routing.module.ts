@@ -5,7 +5,8 @@ import { SearchSerieTvComponent } from './search-serie-tv/search-serie-tv.compon
 
 const routes: Routes = [
     {path : 'search',component : SearchSerieTvComponent},
-    {path : 'details',component : DetailsSerieTvComponent}
+    {path : 'details',component : DetailsSerieTvComponent},
+    { path: '',   redirectTo: '/search', pathMatch: 'full' },
 ];
 
 @NgModule({

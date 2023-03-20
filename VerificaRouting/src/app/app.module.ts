@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchSerieTvComponent } from './search-serie-tv/search-serie-tv.component';
 import { DetailsSerieTvComponent } from './details-serie-tv/details-serie-tv.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { DetailsSerieTvComponent } from './details-serie-tv/details-serie-tv.com
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
